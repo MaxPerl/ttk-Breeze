@@ -2,7 +2,7 @@
 #
 # Breeze pixmap theme for the ttk package.
 #
-#  Copyright (c) 2015 Sergei Golovan <sgolovan@nes.ru>
+#  Copyright (c) 2018 Maximilian Lika
 
 package require Tk 8.6.0
 

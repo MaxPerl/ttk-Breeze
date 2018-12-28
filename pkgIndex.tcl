@@ -12,4 +12,3 @@ if {![package vsatisfies [package provide Tcl] 8.6]} { return }
 package ifneeded ttk::theme::Breeze 0.1 \
     [list source [file join $dir breeze.tcl]]
 
-# vim:ts=8:sw=4:sts=4:et
