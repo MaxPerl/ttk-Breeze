@@ -213,9 +213,9 @@ namespace eval ttk::theme::Breeze {
             image [list $I(entry) \
                 {readonly disabled}  $I(button-insensitive) \
                 {readonly pressed}   $I(button-hover) \
-                {readonly hover}     $I(button-hover) \
+                {readonly focus hover}     $I(button-active) \
                 {readonly focus}     $I(button-focus) \
-                {readonly active}     $I(button-hover) \
+                {readonly hover}     $I(button-hover) \
                 readonly             $I(button) \
                 {disabled} $I(entry-insensitive) \
                 {focus}    $I(entry-focus) \
