@@ -302,6 +302,10 @@ namespace eval ttk::theme::Breeze {
         ttk::style configure TSeparator -background $colors(-bg)
         #ttk::style configure TPanedwindow -width 1 -padding 0
         ttk::style map TPanedwindow -background [list hover $colors(-checklight)]
+        ttk::style map TCombobox -selectbackground [list \
+            {readonly hover} $colors(-checklight) \
+            {readonly focus} $colors(-focuscolor) \
+            ]
         
         # Treeview
         ttk::style configure Treeview -background white
