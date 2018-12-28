@@ -1,2 +1,2 @@
 # ttk-Breeze
-a Tk / ttk theme which is similar to the KDE standard theme Breeze
+a Tk / ttk theme similar to the KDE standard theme Breeze
