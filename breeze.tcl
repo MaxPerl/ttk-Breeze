@@ -24,7 +24,7 @@ namespace eval ttk::theme::Breeze {
         
         -window         "#eff0f1"
         -focuscolor     "#3daee9"
-        -checklight     "#3daee9"
+        -checklight     "#94d0eb"
     }
 
     proc LoadImages {imgdir} {
