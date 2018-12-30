@@ -303,11 +303,13 @@ namespace eval ttk::theme::Breeze {
         #ttk::style configure TPanedwindow -width 1 -padding 0
         ttk::style map TPanedwindow -background [list hover $colors(-checklight)]
         ttk::style map TCombobox -selectbackground [list \
+            !focus         $colors(-window) \
             {readonly hover} $colors(-checklight) \
             {readonly focus} $colors(-focuscolor) \
             ]
             
         ttk::style map TCombobox -selectforeground [list \
+            !focus $colors(-fg) \
             {readonly hover} $colors(-fg) \
             {readonly focus} $colors(-selectfg) \
             ]
