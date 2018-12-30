@@ -8,7 +8,7 @@ package require Tk 8.6.0
 
 namespace eval ttk::theme::Breeze {
 
-    variable version 0.1
+    variable version 0.2
     package provide ttk::theme::Breeze $version
 
     variable colors
@@ -20,7 +20,7 @@ namespace eval ttk::theme::Breeze {
         -disabledfg     "#a8a9aa"
         
         -selectbg       "#3daee9"
-        -selectfg       "#eff0f1"
+        -selectfg       "white"
         
         -window         "#eff0f1"
         -focuscolor     "#3daee9"
@@ -305,6 +305,11 @@ namespace eval ttk::theme::Breeze {
         ttk::style map TCombobox -selectbackground [list \
             {readonly hover} $colors(-checklight) \
             {readonly focus} $colors(-focuscolor) \
+            ]
+            
+        ttk::style map TCombobox -selectforeground [list \
+            {readonly hover} $colors(-fg) \
+            {readonly focus} $colors(-selectfg) \
             ]
         
         # Treeview
