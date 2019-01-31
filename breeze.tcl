@@ -8,7 +8,7 @@ package require Tk 8.6.0
 
 namespace eval ttk::theme::Breeze {
 
-    variable version 0.3
+    variable version 0.4
     package provide ttk::theme::Breeze $version
 
     variable colors
@@ -229,7 +229,7 @@ namespace eval ttk::theme::Breeze {
           ]  -border 4 -sticky {}
 
         ttk::style element create Spinbox.field \
-            image [list $I(entry) focus $I(entry-focus) hover $I(entry-active)] \
+            image [list $I(entry) focus $I(entry-focus) disabled $I(entry-insensitive) hover $I(entry-active)] \
             -border 4 -padding 4 -sticky news
         ttk::style element create Spinbox.uparrow \
             image [list $I(arrow-up-small) \
