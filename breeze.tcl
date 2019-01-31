@@ -8,7 +8,7 @@ package require Tk 8.6.0
 
 namespace eval ttk::theme::Breeze {
 
-    variable version 0.2
+    variable version 0.3
     package provide ttk::theme::Breeze $version
 
     variable colors
