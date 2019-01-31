@@ -47,7 +47,8 @@ namespace eval ttk::theme::Breeze {
             -fieldbackground $colors(-window) \
             -font "Helvetica 10" \
             -borderwidth 1 \
-            -focuscolor $colors(-focuscolor)
+            -focuscolor $colors(-focuscolor) \
+            -highlightcolor $colors(-checklight)
 
         ttk::style map . -foreground [list disabled $colors(-disabledfg)]
 
@@ -67,11 +68,9 @@ namespace eval ttk::theme::Breeze {
 
         ttk::style layout Toolbutton {
             Toolbutton.button -children {
-                Toolbutton.focus -children {
                     Toolbutton.padding -children {
                         Toolbutton.label -side left -expand true
                     }
-                }
             }
         }
 
@@ -116,14 +115,14 @@ namespace eval ttk::theme::Breeze {
                 active      $I(button-hover) \
                 focus       $I(button-focus) \
                 disabled    $I(button-insensitive) \
-            ] -border 3 -padding {3 2} -sticky ewns
+            ] -border 3 -sticky ewns
 
         ttk::style element create Toolbutton.button image [list $I(button-empty) \
                 {active selected !disabled}  $I(button-active) \
                 selected            $I(button-toggled) \
                 pressed             $I(button-active) \
                 {active !disabled}  $I(button-hover) \
-            ] -border 3 -padding {3 2} -sticky news
+            ] -border 3 -sticky news
 
         ttk::style element create Checkbutton.indicator image [list $I(checkbox-unchecked) \
                 disabled            $I(checkbox-unchecked-insensitive) \
@@ -296,10 +295,11 @@ namespace eval ttk::theme::Breeze {
 
         ttk::style configure TButton -padding {8 4 8 4} -width -10 -anchor center
         ttk::style configure TMenubutton -padding {8 4 4 4}
-        ttk::style configure Toolbutton -anchor center
+        ttk::style configure Toolbutton -padding {6 2} -anchor center
         ttk::style configure TCheckbutton -padding 4
         ttk::style configure TRadiobutton -padding 4
         ttk::style configure TSeparator -background $colors(-bg)
+
         #ttk::style configure TPanedwindow -width 1 -padding 0
         ttk::style map TPanedwindow -background [list hover $colors(-checklight)]
         ttk::style map TCombobox -selectbackground [list \
