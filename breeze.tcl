@@ -8,7 +8,7 @@ package require Tk 8.6.0
 
 namespace eval ttk::theme::Breeze {
 
-    variable version 0.4
+    variable version 0.5
     package provide ttk::theme::Breeze $version
 
     variable colors
@@ -16,8 +16,10 @@ namespace eval ttk::theme::Breeze {
         -fg             "#31363b"
         -bg             "#eff0f1"
         
-        -disabledbg     "#e3e5e6"
-        -disabledfg     "#a8a9aa"
+        #-disabledbg     "#e3e5e6"
+        #-disabledfg     "#a8a9aa"
+        -disabledfg     "#bbcbbe"
+        -disabledbg     "#e7e8ea"
         
         -selectbg       "#3daee9"
         -selectfg       "white"
@@ -190,7 +192,7 @@ namespace eval ttk::theme::Breeze {
                         {focus !disabled} $I(entry-focus) \
                         {hover !disabled} $I(entry-active) \
                         disabled $I(entry-insensitive)] \
-            -border 3 -padding {6 4} -sticky news
+            -border 3 -padding {6 8} -sticky news
 
         ttk::style element create Labelframe.border image $I(labelframe) \
             -border 4 -padding 4 -sticky news
@@ -220,7 +222,7 @@ namespace eval ttk::theme::Breeze {
                 {focus}    $I(entry-focus) \
                 {focus hover}    $I(entry-focus) \
                 {hover}    $I(entry-active) \
-            ] -border 4 -padding 4
+            ] -border 4 -padding {6 8}
         ttk::style element create Combobox.downarrow \
             image [list $I(arrow-down) \
                         active    $I(arrow-down-prelight) \
@@ -230,7 +232,7 @@ namespace eval ttk::theme::Breeze {
 
         ttk::style element create Spinbox.field \
             image [list $I(entry) focus $I(entry-focus) disabled $I(entry-insensitive) hover $I(entry-active)] \
-            -border 4 -padding 4 -sticky news
+            -border 4 -padding {6 8} -sticky news
         ttk::style element create Spinbox.uparrow \
             image [list $I(arrow-up-small) \
                         active    $I(arrow-up-small-prelight) \
