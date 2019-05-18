@@ -8,7 +8,7 @@ package require Tk 8.6.0
 
 namespace eval ttk::theme::Breeze {
 
-    variable version 0.5
+    variable version 0.6
     package provide ttk::theme::Breeze $version
 
     variable colors
@@ -319,5 +319,16 @@ namespace eval ttk::theme::Breeze {
         # Treeview
         ttk::style configure Treeview -background white
         ttk::style configure Treeview.Item -padding {2 0 0 0}
+        
+        # Some defaults for non ttk-widgets so that they fit
+        # to the Breeze theme, too
+        tk_setPalette background [ttk::style lookup . -background] \
+        	foreground [ttk::style lookup . -foreground] \
+        	highlightColor [ttk::style lookup . -focuscolor] \
+        	selectBackground [ttk::style lookup . -selectbackground] \
+        	selectForeground [ttk::style lookup . -selectforeground] \
+        	activeBackground [ttk::style lookup . -selectbackground] \
+        	activeForeground [ttk::style lookup . -selectforeground]
+        option add *font [ttk::style lookup . -font]
     }
 }
