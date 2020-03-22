@@ -9,6 +9,6 @@
 if {![file isdirectory [file join $dir Breeze]]} { return }
 if {![package vsatisfies [package provide Tcl] 8.6]} { return }
 
-package ifneeded ttk::theme::Breeze 0.6 \
+package ifneeded ttk::theme::Breeze 0.7 \
     [list source [file join $dir breeze.tcl]]
 
