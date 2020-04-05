@@ -8,7 +8,7 @@ package require Tk 8.6.0
 
 namespace eval ttk::theme::Breeze {
 
-    variable version 0.7
+    variable version 0.8
     package provide ttk::theme::Breeze $version
 
     variable colors
@@ -112,10 +112,10 @@ namespace eval ttk::theme::Breeze {
         #
 
         ttk::style element create Button.button image [list $I(button) \
-                pressed     $I(button-active) \
+                pressed     $I(button-focus) \
                 {active focus}       $I(button-active) \
                 active      $I(button-hover) \
-                focus       $I(button-focus) \
+                focus       $I(button-hover) \
                 disabled    $I(button-insensitive) \
             ] -border 3 -sticky ewns
 
