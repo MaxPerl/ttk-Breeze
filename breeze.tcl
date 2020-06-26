@@ -119,7 +119,7 @@ namespace eval ttk::theme::Breeze {
                 disabled    $I(button-insensitive) \
             ] -border 3 -sticky ewns
 
-        ttk::style element create Toolbutton.button image [list $I(button-empty) \
+        ttk::style element create Toolbutton.button image [list $I(empty) \
                 {active selected !disabled}  $I(button-active) \
                 selected            $I(button-toggled) \
                 pressed             $I(button-active) \
